@@ -117,10 +117,10 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #585858;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Microsoft YaHei", "Arial", sans-serif; /* Changed to a more normal, rounded font that supports Chinese */
 		font-size: 16pt;
 		font-weight: 300;
-		line-height: 1.75;
+		line-height: 1.5; /* Reduced line-height for less spacing */
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -163,7 +163,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1.3em 0;
 	}
 
 	h1 {
@@ -198,35 +198,35 @@ input, select, textarea {
 	h2, h3, h4, h5, h6 {
 		font-weight: 900;
 		line-height: 1.5;
-		margin: 0 0 2em 0;
-		text-transform: uppercase;
-		letter-spacing: 0.35em;
+		margin: 0 0 0.5em 0; /* Adjusted margin for normal spacing */
+		text-transform: none; /* Removed uppercase transformation */
+		letter-spacing: normal; /* Adjusted letter-spacing for normal spacing */
 	}
-
-		h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
-		}
-
+	
+	h2 a, h3 a, h4 a, h5 a, h6 a {
+		color: inherit;
+	}
+	
 	h2 {
-		font-size: 1.1em;
+		font-size: 1.5em;
 	}
-
+	
 	h3 {
-		font-size: 1em;
+		font-size: 1.3em;
 	}
-
+	
 	h4 {
-		font-size: 0.8em;
+		font-size: 1.0em;
 	}
-
+	
 	h5 {
-		font-size: 0.8em;
+		font-size: 0.9em;
 	}
-
+	
 	h6 {
 		font-size: 0.8em;
 	}
-
+		
 	@media screen and (max-width: 980px) {
 
 		h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
@@ -2572,7 +2572,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		position: relative;
 		margin: -2.5em 0 0 -2.5em;
 	}
 

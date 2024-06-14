@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown内容展示</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div id="markdown-container">加载Markdown内容中...</div>
+
+    <script>
+        // 确保你的Markdown文件路径是正确的
+        fetch('markdown/example.md')
+            .then(response => {
+                // 检查响应是否成功
+                if (!response.ok) {
+                    throw new Error('网络响应错误');
+                }
+                return response.text();
+            })
+            .then(text => {
+                // 使用marked.parse将Markdown转换为HTML
+                document.getElementById('markdown-container').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                console.error('加载Markdown文件出错:', error);
+                document.getElementById('markdown-container').innerHTML = '加载Markdown文件失败: ' + error.message;
+            });
+    </script>
+</body>
+</html>

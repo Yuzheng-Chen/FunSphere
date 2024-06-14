@@ -1,0 +1,1 @@
+Welcome to **Clicker Game Plus**, the thrilling new version of the beloved **Clicker Game**. This enhanced edition retains all the charm of the original while introducing exciting new features that make the gameplay even more engaging and rewarding.
