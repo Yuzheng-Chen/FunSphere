@@ -2,7 +2,6 @@
 <html>
 <head>
     <title id="page-title">Gameplay</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -32,6 +31,7 @@
         <!-- Menu -->
         <nav id="menu">
             <h2>Menu</h2>
+            <br>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="generic.html">Ipsum veroeros</a></li>
@@ -43,9 +43,9 @@
             <div class="inner">
                 <h1 id="main-title">Gameplay</h1>
                 <div class="game-container">
-                    <iframe id="game-iframe" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
+                    <iframe id="game-iframe" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>                            
                 </div>
-                <br>
+                <button id="fullscreen-btn">Go Fullscreen</button>
                 <div id="markdown-container"></div>    
             </div>
         </div>
@@ -63,37 +63,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/partials.js"></script>
-    <script>
-        function setupGame() {
-            var gameType = new URLSearchParams(window.location.search).get('gm') || 'ClickerGamePlus';
-            var formattedGameType = gameType.replace(/([A-Z])/g, ' $1').trim(); // 将camelCase或其他形式转换为带空格的形式
-
-            // 更新标题和H1
-            document.getElementById('page-title').textContent = formattedGameType;
-            document.getElementById('main-title').textContent = formattedGameType;
-
-            // 设置iframe的src
-            document.getElementById('game-iframe').src = "https://yuzheng-chen.github.io/GamesHub?gm=" + gameType;
-
-            // 加载Markdown文件
-            fetch('markdown/' + gameType + '.md')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load the Markdown file');
-                    }
-                    return response.text();
-                })
-                .then(text => {
-                    document.getElementById('markdown-container').innerHTML = marked.parse(text);
-                })
-                .catch(error => {
-                    console.error('Error loading the Markdown file:', error);
-                    document.getElementById('markdown-container').innerHTML = 'Failed to load Markdown content: ' + error.message;
-                });
-        }
-
-        // 页面加载时，设置内容
-        window.onload = setupGame;
-    </script>
+    <script src="assets/js/game.js"></script>
 </body>
 </html>
