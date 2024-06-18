@@ -46,3 +46,9 @@
     margin-top: 15pt;
     margin-bottom: 25pt;
 }
+
+#source-selector {
+    margin-left: 10px; /* Add space between the button and the dropdown */
+    vertical-align: middle; /* Align vertically with the button */
+}
+
