@@ -40,15 +40,25 @@
     border-radius: 5px;
 }
 
-#fullscreen-btn {
-    font-family: "Microsoft YaHei", "Arial", sans-serif; /* Changed to a more normal, rounded font that supports Chinese */
-    font-size: 10pt;
-    margin-top: 15pt;
+.control-panel {
+    display: flex; /* This will align children (button and select) in a row */
+    align-items: center; /* This will vertically align the children in the middle */
+    justify-content: center; /* This centers the children horizontally in the container */
+    margin-top: 10pt;
     margin-bottom: 25pt;
 }
 
+#fullscreen-btn {
+    font-family: "Microsoft YaHei", "Arial", sans-serif; /* Changed to a more normal, rounded font that supports Chinese */
+    font-size: auto;
+    margin-right: 10px; /* Adds some space between the button and the dropdown */
+    height: auto;
+}
+
 #source-selector {
-    margin-left: 10px; /* Add space between the button and the dropdown */
-    vertical-align: middle; /* Align vertically with the button */
+    cursor: pointer; /* Improves UX by changing cursor style when hovering over the dropdown */
+    margin-left: auto;
+    width: auto;
+    height: auto;
 }
 
