@@ -41,23 +41,29 @@
 }
 
 .control-panel {
-    display: flex; /* This will align children (button and select) in a row */
-    align-items: center; /* This will vertically align the children in the middle */
-    justify-content: center; /* This centers the children horizontally in the container */
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
     margin-top: 10pt;
     margin-bottom: 25pt;
 }
 
 #fullscreen-btn {
-    font-family: "Microsoft YaHei", "Arial", sans-serif; /* Changed to a more normal, rounded font that supports Chinese */
+    font-family: "Microsoft YaHei", "Arial", sans-serif; 
     font-size: auto;
-    margin-right: 10px; /* Adds some space between the button and the dropdown */
     height: auto;
 }
 
-#source-selector {
-    cursor: pointer; /* Improves UX by changing cursor style when hovering over the dropdown */
+label {
     margin-left: auto;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-weight:lighter;
+    font-size: large;
+}
+
+#source-selector {
+    cursor: pointer;
     width: auto;
     height: auto;
 }
